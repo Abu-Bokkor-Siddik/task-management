@@ -5,7 +5,8 @@ import NavbarTwo from "../navbar/NavbarTwo";
 import { AuthContext } from "../auth/AuthProvider";
 import useTanstacks from "../Hooks/useTanstacks";
 import Todos from "../shaire/Todos";
-
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 const Dashbord = () => {
   const axiosP=useAxios()
   const {user}=useContext(AuthContext)
@@ -81,12 +82,16 @@ const Dashbord = () => {
             
 
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Add</button>
+              <button className="btn bg-green-300">Add</button>
             </div>
           </form>
         </div>
         {/* task todo */}
+       <div>
+       <DndProvider backend={HTML5Backend}>
        <Todos data={data} refetch={refetch}></Todos>
+       </DndProvider>
+       </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Navbar = () => {
         {/* Navbar */}
         <div className="w-full navbar bg-base-300">
           {/**navbar 1200px */}
-          <div className=" w-full max-w-[1500px] mx-auto ">
+          <div className=" w-full  h-20 max-w-[1500px] mx-auto ">
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="my-drawer-3"
@@ -31,7 +31,7 @@ const Navbar = () => {
               </label>
             </div>
             <div className="flex-1 px-2 mx-2">
-              <div className="flex bg-slate-600 justify-center items-center gap-3">
+              <div className="flex justify-center items-center gap-3">
                 {/* <img
                   className="h-16 w-16 rounded-full"
                   src="https://i.ibb.co/J32nPng/bb221ff6bcbb3537f0c791923b899b07.jpg"

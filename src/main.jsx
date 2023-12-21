@@ -17,6 +17,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
+import Update from "./page/Update.jsx";
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -35,6 +36,12 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3006/tasks/${params.id}`),
       },
     ],
   },
