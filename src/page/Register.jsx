@@ -3,6 +3,7 @@ import { Link} from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 import { imgUpload } from "../Hooks/imageup";
 import { useNavigate } from 'react-router-dom';
+import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
   const navigate = useNavigate()
   const {user,signs,profile}=useContext(AuthContext)
@@ -13,7 +14,7 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const profession = e.target.profession.value;
-    //  e.target.reset()
+     e.target.reset()
     console.log(name, image, email, password, profession);
     // signs()
    
@@ -24,7 +25,7 @@ const Register = () => {
       await profile(name,data?.data?.display_url)
       // todo
       navigate('/dashboard')
-      
+      toast.success("Register Successfully");
       console.log(name,data?.data?.display_url,profession,email,"all form data")
       console.log(user)
     } catch (error) {
@@ -33,6 +34,7 @@ const Register = () => {
   };
   return (
     <div>
+      <Toaster />
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col ">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

@@ -10,7 +10,7 @@ const Privet = ({children}) => {
     if(user){
         return children
     }
-  return <Navigate to="/login"></Navigate>
+  return <Navigate to="/"></Navigate>
 }
 
 export default Privet

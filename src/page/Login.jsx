@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 import { useNavigate } from 'react-router-dom';
+import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
   const navigate = useNavigate()
   const {user,logins,google}=useContext(AuthContext)
@@ -14,7 +15,9 @@ const Login = () => {
     logins(email,password)
     .then(res=>{
       console.log(res)
+      toast.success("Login successfully");
       navigate('/dashboard')
+      
     })
 
   }
@@ -23,16 +26,19 @@ const Login = () => {
     google()
     .then(res =>{
       console.log(res.user)
+      toast.success("Login successfully");
       navigate('/dashboard')
+      
     })
   }
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col ">
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={login} className="card-body">
+      <Toaster />
+      <div className="hero min-h-screen z-10 bg-base-200">
+        <div className="hero-content flex-col z-10">
+          <div className="card flex-shrink-0 z-10 w-full max-w-sm shadow-2xl bg-base-100">
+            <form onSubmit={login} className="card-body z-10 ">
               <p className="text-center text-3xl font-semibold">Login</p>
               <div className="form-control">
                 <label className="label">

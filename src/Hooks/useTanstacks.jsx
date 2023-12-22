@@ -8,7 +8,7 @@ const useTanstacks = () => {
     const {data,refetch}=useQuery({
         queryKey:['all task',user?.email],
         queryFn:async()=>{
-            const data = await axios.get(`http://localhost:3006/tasks?email=${user?.email}`)
+            const data = await axios.get(`https://dashboards-server.vercel.app/tasks?email=${user?.email}`)
             return data?.data
         }
     })

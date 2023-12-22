@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "name": "Students",
+      "description": "Organize assignments, track deadlines, and manage study schedules."
+    },
+    {
+      "id": 2,
+      "name": "Freelancers",
+      "description": "Track project deadlines, manage client tasks, and improve time management."
+    },
+    {
+      "id": 3,
+      "name": "Teams",
+      "description": "Collaborate on projects, assign tasks, and monitor progress collectively."
+    }
+  ]
+  

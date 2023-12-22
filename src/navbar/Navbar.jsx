@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="drawer">
+    <div className="drawer z-50">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
@@ -32,17 +32,11 @@ const Navbar = () => {
             </div>
             <div className="flex-1 px-2 mx-2">
               <div className="flex justify-center items-center gap-3">
-                {/* <img
-                  className="h-16 w-16 rounded-full"
-                  src="https://i.ibb.co/J32nPng/bb221ff6bcbb3537f0c791923b899b07.jpg"
-                  alt=""
-                /> */}
-
                 <p className="text-2xl font-bold">Task Management</p>
               </div>
             </div>
-            <div className="flex-none hidden lg:block">
-              <div className="menu menu-horizontal">
+            <div className="flex-none hidden z-50 lg:block">
+              <div className="menu menu-horizontal z-50">
                 {/* Navbar menu content here */}
 
                 <div className="flex gap-3 w-[600px] justify-center items-center  ">
@@ -72,14 +66,18 @@ const Navbar = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="menu p-4 w-80 min-h-full bg-base-200">
+        <div className="menu p-4 w-80 min-h-full z-50 bg-base-200">
           {/* Sidebar content here */}
-          <div className="flex flex-col gap-2">
-            <NavLink className="" to="/">
+          <div className="flex z-40 flex-col gap-2">
+            <NavLink className="text-xl font-semibold" to="/">
               Home
             </NavLink>
-            <NavLink to="/create">Create </NavLink>
-           
+            <NavLink className="text-xl font-semibold" to="/dashboard">
+              Dashboard
+            </NavLink>
+            <NavLink className="text-xl font-semibold" to="/register">
+              Register
+            </NavLink>
           </div>
         </div>
       </div>

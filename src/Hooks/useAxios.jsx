@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosP = axios.create({
-    baseURL: 'http://localhost:3006/',
+    baseURL: 'https://dashboards-server.vercel.app/',
     
   });
 const useAxios = () => {

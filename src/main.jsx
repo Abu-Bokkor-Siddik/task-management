@@ -18,16 +18,19 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import Update from "./page/Update.jsx";
+import Error from "./page/Error.jsx";
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+        loader:()=> fetch('/fake.json')
       },
       {
         path: "/login",
@@ -41,7 +44,7 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <Update></Update>,
         loader: ({ params }) =>
-          fetch(`http://localhost:3006/tasks/${params.id}`),
+          fetch(`https://dashboards-server.vercel.app/tasks/${params.id}`),
       },
     ],
   },
