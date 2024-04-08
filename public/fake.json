@@ -13,6 +13,37 @@
       "id": 3,
       "name": "Teams",
       "description": "Collaborate on projects, assign tasks, and monitor progress collectively."
+    },
+    {
+      "id": 4,
+      "name": "Corporations",
+      "description": "for project management, task delegation, and team coordination across departments."
+    },
+    {
+      "id": 5,
+      "name": "Academic Group",
+      "description": "for organizing group projects, study sessions, and research tasks."
+    },
+    {
+      "id": 6,
+      "name": "Hobbyists",
+      "description": "for scheduling creative projects, hobby-related tasks, and personal goals."
+    },
+    {
+      "id": 7,
+      "name": "Homeowners",
+      "description": "for keeping track of household chores, maintenance tasks, and shopping lists."
+    },
+    {
+      "id": 8,
+      "name": "Professionals",
+      "description": "for organizing work tasks, deadlines, meetings, and personal errands."
+      
+    },
+    {
+      "id": 9,
+      "name": "Entrepreneurs",
+      "description": "for managing startup tasks, project timelines, and business development activities."
     }
   ]
   

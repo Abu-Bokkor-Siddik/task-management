@@ -111,7 +111,7 @@ const NavbarTwo = () => {
                 {user && (
                   <div className="text-xl text-wrap text-center font-semibold h-auto my-1">
                     Name :{user?.displayName}
-                    <p className="text-wrap">{user?.email}</p>
+                    <p className="text-wrap text-base my-5">{user?.email}</p>
                   </div>
                 )}
 

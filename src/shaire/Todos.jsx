@@ -6,6 +6,7 @@ import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useDrag, useDrop } from "react-dnd";
 import toast, { Toaster } from "react-hot-toast";
+import PropTypes from 'prop-types';
 
 const Todos = ({ data, refetch }) => {
   // console.log(data)
@@ -84,7 +85,7 @@ const Section = ({ status, todo, ongoing, complete, refetch }) => {
   return (
     <div ref={drop} className="max-w-[1200px] mx-20 my-8">
       <div className="  ">
-        <h1 className="bg-green-300 rounded-lg p-3 text-xl text-black w-72 ">
+        <h1 className="bg-blue-400 text-white rounded-lg p-3 text-xl  w-72 ">
           {status} {todosmap?.length}
         </h1>
         <div>
@@ -166,12 +167,12 @@ const Tasks = ({ item, refetch }) => {
     <div ref={drag}  className=" bg-green-300 rounded-lg w-72 h-auto my-3 "><div onClick={()=>todoss(item?.Deadline)}><div  className="flex gap-3 items-center justify-between">{
      
     }
-      <p className="text-start pl-3">{item?.priority}</p>
-      <p className="text-end pr-3"> {item?.Deadline} </p>
+      <p className="text-start text-black pl-3">{item?.priority}</p>
+      <p className="text-end pr-3 text-black"> {item?.Deadline} </p>
     </div>
    
       
-        <p className="rounded-lg p-3 text-xl text-black h-auto w-48  bg-blue-400  ">
+        <p className="rounded-lg p-3 text-xl text-white h-auto w-48  bg-blue-400  ">
           {item?.Description}
         </p></div>
         <div className="flex justify-end gap-5 items-center">

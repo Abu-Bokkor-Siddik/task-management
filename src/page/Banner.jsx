@@ -1,18 +1,23 @@
 import { NavLink } from "react-router-dom";
+import Swipers from "../shaire/swipet/Swiper";
+
 
 const Banner = () => {
   return (
     <div>
-      <div className="hero h-[900px]" style={{backgroundImage: 'url(https://i.ibb.co/7vSqd6m/sticky-todo-11106198.jpg)'}}>
-  <div className="hero-overlay bg-opacity-60"></div>
-  <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-4xl font-bold">Hello Friends</h1>
-      <p className="mb-5">Spice up your daily productivity with this fantastic new todo web application! With its sleek design and user-friendly interface, tackling your tasks has never been more enjoyable. Stay organized, stay on top of your game, and let the spicy features of this app elevate your daily task management to a whole new level!</p>
-      <NavLink to="/login"><button className="btn bg-blue-400">Let's Explore</button></NavLink>
+{/* hero */}
+<div className="hero h-auto w-auto lg:min-h-[800px] bg-base-200">
+  <div className="hero-content   flex-col-reverse justify-between lg:flex-row-reverse gap-16  lg:gap-80">
+    <Swipers></Swipers>
+    <div className="">
+      <h1 className=" text-2xl mt-12 lg:text-5xl font-bold ">Tasks Management</h1>
+      <p className="  lg:my-8 mb-5 mt-2 text-sm lg:text-xl">Streamline your tasks effortlessly with our intuitive platform. Stay organized, prioritize, and collaborate seamlessly for enhanced productivity. Experience the ease of managing your workload anytime, anywhere.</p>
+      <NavLink to="/login"><button className="btn btn-sm lg:btn-md  btn-outline btn-info ">Let's Explore</button></NavLink>
     </div>
   </div>
 </div>
+{/* end */}
+
     </div>
   )
 }

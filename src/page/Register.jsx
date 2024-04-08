@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
   const navigate = useNavigate()
-  const {user,signs,profile}=useContext(AuthContext)
+  const {user,signs,profile,setLoading}=useContext(AuthContext)
   const formInfo = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -21,11 +21,14 @@ const Register = () => {
     try {
       const data = await imgUpload(image)
     console.log(data,'data image')
-      const registers = await signs(email,password)
+       await signs(email,password)
+      //  setLoading(false)
       await profile(name,data?.data?.display_url)
       // todo
-      navigate('/dashboard')
-      toast.success("Register Successfully");
+      await navigate('/dashboard')
+      await setLoading(false)
+      
+       await toast.success("Register Successfully");
       console.log(name,data?.data?.display_url,profession,email,"all form data")
       console.log(user)
     } catch (error) {

@@ -3,6 +3,9 @@
 
 import { useLoaderData } from 'react-router-dom'
 import Banner from './Banner'
+import Animations from '../shaire/lotti/Animations'
+import '../shaire/cards/card.css'
+import Circle from '../shaire/circle/Circle'
 
 
 const Home = () => {
@@ -12,19 +15,31 @@ const Home = () => {
     <div className=' '>
      
      <Banner></Banner>
-     <p className='text-3xl text-center my-10'> Who can use this Website and Who Can Benefit from this website?</p>
-     <div className='flex flex-col lg:flex-row justify-center gap-5 items-center min-h-96 my-8 lg:my-1'>
+    
+     <p className='text-3xl text-center font-bold my-10'> Users Benefit</p>
+     <div className='lg:grid flex flex-col lg:grid-cols-3    my-8 lg:mb-20 h-auto max-w-[1100px] lg:mx-auto justify-evenly items-center gap-10    '>
       {
-        data?.map(card=><div key={card?.id} className="card shadow-2xl  w-96 bg-blue-400 ">
-        <div className="card-body text-slate-300">
-          <h2 className="card-title">{card?.name}</h2>
-          <p>{card?.description}</p>
+        data?.map(card=><div key={card?.id} className="card cards shadow-2xl ml-5 w-96 bg-blue-400 ">
+        <div className="card-body text-white">
+          <h2 className="card-title text-2xl text-white">{card?.name}</h2>
+          <p className='text-base'>{card?.description}</p>
+         
           
         </div>
       </div>)
       }
      </div>
+     <div className='max-w-[1080px] h-auto mx-auto mb-10 '>
+     <p className='text-3xl text-center font-bold mb-8'>Explore Apps </p>
+     <div className='flex'>
+     <Animations></Animations>
      
+     </div>
+     </div>
+     <p className='text-center hidden lg:block text-3xl font-bold my-5'>Clients Reviews</p>
+     <div className=' hidden lg:block lg:max-w-[1080px] mx-auto relative h-[600px] ' >
+     <Circle></Circle> 
+     </div>
     </div>
   )
 }
