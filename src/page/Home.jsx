@@ -37,7 +37,9 @@ const Home = () => {
      </div>
      </div>
      <p className='text-center hidden lg:block text-3xl font-bold my-5'>Clients Reviews</p>
-     <div className=' hidden lg:block lg:max-w-[1080px] mx-auto relative h-[600px] ' >
+     <div style={{backgroundImage: 'url(https://i.ibb.co/Tm6MNK8/images.jpg)',backgroundRepeat: 'no-repeat',backgroundSize: 'cover'}
+    
+    } className=' w-auto  lg:max-w-[1080px] mx-auto relative h-[650px] lg:h-[500px] rounded-md  mb-10' >
      <Circle></Circle> 
      </div>
     </div>

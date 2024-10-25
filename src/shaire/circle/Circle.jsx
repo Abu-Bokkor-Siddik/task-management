@@ -19,22 +19,23 @@ const Circle = () => {
   return (
     <div>
       <div className="carousel  ">
-        <div className="absolute lg:top-[70px] lg:left-2 ">
+        <div className=" absolute top-[340px] left-28 mx-auto lg:absolute lg:top-[125px] lg:left-40 ">
         <FancyCarousel
           images={images} 
           setFocusElement={setFocusElement}
-          carouselRadius={200}
-          peripheralImageRadius={50}
-          centralImageRadius={50}
+          carouselRadius={100}
+          peripheralImageRadius={34}
+          centralImageRadius={34}
           focusElementStyling={{border: '2px solid #ba4949'}}
           autoRotateTime={3}
           borderWidth={4}
           borderHexColor={'1c364f'}
+          
         
         /> 
         </div>
 
-        <div className="absolute h-44 w-60 lg:top-44 lg:right-20 bg-[#3785fa] text-white text-base rounded-md lg:p-5">
+        <div className=" absolute h-44 w-60 top-14 left-24 lg:top-40 lg:left-[700px] bg-[#3785fa] text-white text-base rounded-md p-5">
         <div className="info-box-wrapper  ">
         <p className=""> {info[focusElement]} </p>
       </div>

@@ -6,7 +6,7 @@ const Navbar = () => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-base-300">
+        <div className="min-w-auto bg-base-300 navbar ">
           {/**navbar 1200px */}
           <div className=" w-full  h-[70px] max-w-[1500px] mx-auto ">
             <div className="flex-none lg:hidden">
